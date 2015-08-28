@@ -22,13 +22,14 @@ unpack-jdk-tarball:
     - link: {{ java.java_home }}
     - path: {{ java.java_real_home }}
     - priority: 30
-java:
+
+java-alternative:
   alternatives.install:
     - name: java
     - link: /usr/bin/java
     - path: {{ java.java_home }}/jre/bin/java
     - priority: 30
-java:
+javac-alternative:
   alternatives.install:
     - name: javac
     - link: /usr/bin/java
